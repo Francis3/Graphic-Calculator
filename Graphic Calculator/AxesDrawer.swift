@@ -7,6 +7,14 @@
 //
 
 import UIKit
+import CoreGraphics
+
+extension CGRect {
+    public mutating func insetInPlace(dx: CGFloat = 0,dy: CGFloat = 0) {
+        self = insetBy(dx: dx, dy: dy)
+    }
+}
+
 
 class AxesDrawer
 {
@@ -84,7 +92,7 @@ class AxesDrawer
             
             // now create a bounding box inside whose edges those four hashmarks lie
             let bboxSize = pointsPerHashmark * startingHashmarkRadius * 2
-            let bbox = CGRect(center: origin, size: CGSize(width: bboxSize, height: bboxSize))
+            var bbox = CGRect(center: origin, size: CGSize(width: bboxSize, height: bboxSize))
             
             // formatter for the hashmark labels
             let formatter = NumberFormatter()
@@ -107,8 +115,10 @@ class AxesDrawer
                 if let bottomHashmarkPoint = alignedPoint(x: origin.x, y: bbox.maxY, insideBounds:bounds) {
                     drawHashmarkAtLocation(location: bottomHashmarkPoint, text: .Left("-\(label)"))
                 }
-                //bbox.insetInPlace(dx: -pointsPerHashmark, dy: -pointsPerHashmark)
-                bbox.insetBy(dx: -pointsPerHashmark, dy: -pointsPerHashmark)
+
+                bbox.insetInPlace(dx: -pointsPerHashmark, dy: -pointsPerHashmark)
+                print("heigt: \(bbox.height) width: \(bbox.width)")
+                print("  ")
             }
         }
     }

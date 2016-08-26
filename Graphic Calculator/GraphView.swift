@@ -8,15 +8,15 @@
 
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 class GraphView: UIView
 {
 
     private var axes = AxesDrawer()
     
-    @IBInspectable
+    //@IBInspectable
     var graphScaleFactor: CGFloat = 50 { didSet { setNeedsDisplay()}}
-    @IBInspectable
+    //@IBInspectable
     var axesCenter: CGPoint = CGPoint(x: 0,y :0) { didSet { setNeedsDisplay()}}
     
     //private let originalCenter = convert(center, from: superview)

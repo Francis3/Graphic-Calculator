@@ -30,9 +30,11 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func backspace(_ sender: UIButton) {
         
-        var textCurrentlyInDisplay = display.text!
-        textCurrentlyInDisplay.remove(at: textCurrentlyInDisplay.index(before: textCurrentlyInDisplay.endIndex))
-        display.text = textCurrentlyInDisplay == "" ? "0" : textCurrentlyInDisplay
+        if userIsInTheMiddleOfTyping {
+            var textCurrentlyInDisplay = display.text!
+            textCurrentlyInDisplay.remove(at: textCurrentlyInDisplay.index(before: textCurrentlyInDisplay.endIndex))
+            display.text = textCurrentlyInDisplay == "" ? "0" : textCurrentlyInDisplay
+        }
     }
     
     @IBAction private func touchDigit(_ sender: UIButton) {
