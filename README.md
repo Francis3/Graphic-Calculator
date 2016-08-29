@@ -5,8 +5,8 @@ Xcode Version 8.0 beta 6 (8S201h)
 
 Done:
 
-CalculatorBrain / CalculatorBrainController / Graph axes / Gestures
+CalculatorBrain / CalculatorBrainController / Graph axes / Gestures /  Graph the program in the main MVC 
 
 To be done:
 
- Graph the program in the main MVC / Graphing button state / Preserving origin & scale between launchings of the app. / Improve panning performance / Last graph showing at application launch
+Graphing button state / Preserving origin & scale between launchings of the app. / Improve panning performance / Last graph showing at application launch
