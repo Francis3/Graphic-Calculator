@@ -12,7 +12,6 @@ func random(min: Double, max: Double) -> Double {
     return (Double(arc4random()) / Double(UINT32_MAX)) * (max - min) + min
 }
 
-
 class CalculatorBrain {
     
     private var accumulator = 0.0
@@ -129,7 +128,6 @@ class CalculatorBrain {
         }
     }
     
-    
     func setOperand(VariableName: String) {
         internalVariableValue = variableValues[VariableName] ?? 0.0
         accumulator = internalVariableValue
@@ -137,13 +135,11 @@ class CalculatorBrain {
         accumulatorDescription = VariableName
     }
     
-    
     func setOperand(operand: Double) {
         accumulator = operand
         internalProgram.append(operand as AnyObject)
         accumulatorDescription = String(format:"%g",operand)
     }
-    
     
     var variableValues: [String:Double] = [:] {
         didSet {
@@ -225,13 +221,13 @@ class CalculatorBrain {
             }
         }
     }
-
-private func clear() {
-    accumulator = 0.0
-    accumulatorDescription = " "
-    internalVariableValue = 0.0
-    pending = nil
-    internalProgram.removeAll()
-    internalError = nil
-}
+    
+    private func clear() {
+        accumulator = 0.0
+        accumulatorDescription = " "
+        internalVariableValue = 0.0
+        pending = nil
+        internalProgram.removeAll()
+        internalError = nil
+    }
 }
