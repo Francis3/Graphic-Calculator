@@ -32,7 +32,7 @@ class CalculatorBrain {
         get {
             if isPartialResult {
                 return pending!.binaryFunctionDescription(pending!.firstOperandDescription,
-                                                    pending!.firstOperandDescription != accumulatorDescription ? accumulatorDescription : "")
+                                                          pending!.firstOperandDescription != accumulatorDescription ? accumulatorDescription : "")
             } else {
                 return accumulatorDescription
             }
@@ -60,7 +60,7 @@ class CalculatorBrain {
         case RandomNumber
         case Equals
     }
-
+    
     private var operations: [String:Operation] = [
         
         "Rand": Operation.RandomNumber,
@@ -99,7 +99,7 @@ class CalculatorBrain {
                 executePendingBinaryOperation()
                 //accumulatorDescription = accumulatorDescription
                 pending = PendingBinaryOperationInfo(binaryFunction: function, binaryFunctionDescription: descriptionFunction, firstOperand: accumulator, firstOperandDescription: accumulatorDescription, binaryFunctionSymbol: symbol, errorBooleanFunction: errorFunction)
-                                case .Equals:
+            case .Equals:
                 executePendingBinaryOperation()
             case .RandomNumber:
                 accumulator = random(min: 0.0, max: 1.0)
@@ -119,7 +119,7 @@ class CalculatorBrain {
         var errorBooleanFunction: ((Double) -> Bool)?
     }
     
-
+    
     private func executePendingBinaryOperation() {
         if pending != nil {
             accumulatorDescription = pending!.binaryFunctionDescription(pending!.firstOperandDescription, accumulatorDescription)
@@ -135,8 +135,8 @@ class CalculatorBrain {
         accumulator = internalVariableValue
         internalProgram.append(VariableName as AnyObject)
         accumulatorDescription = VariableName
-        }
-
+    }
+    
     
     func setOperand(operand: Double) {
         accumulator = operand
@@ -165,7 +165,7 @@ class CalculatorBrain {
         clear()
         variableValues = [:]
     }
-
+    
     // MARK: - Error detection
     private enum CalculatorBrainError: Error {
         case SquareRootOfaNegativeNumber
@@ -221,18 +221,17 @@ class CalculatorBrain {
                     } else {
                         setOperand(VariableName: op as! String)
                     }
-                  }
                 }
             }
         }
     }
 
-    private func clear() {
-        accumulator = 0.0
-        accumulatorDescription = " "
-        internalVariableValue = 0.0
-        pending = nil
-        internalProgram.removeAll()
-        internalError = nil
-    }
+private func clear() {
+    accumulator = 0.0
+    accumulatorDescription = " "
+    internalVariableValue = 0.0
+    pending = nil
+    internalProgram.removeAll()
+    internalError = nil
+}
 }
