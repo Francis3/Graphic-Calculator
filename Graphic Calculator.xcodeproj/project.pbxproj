@@ -66,10 +66,9 @@
 			children = (
 				AE7584401D6989590005C1B1 /* CalculatorBrain.swift */,
 				AE75843E1D6989510005C1B1 /* AxesDrawer.swift */,
+				AE7584441D6989780005C1B1 /* GraphView.swift */,
 				AE7584421D6989700005C1B1 /* CalculatorViewController.swift */,
 				AE7584461D69897F0005C1B1 /* GraphViewController.swift */,
-				AE7584441D6989780005C1B1 /* GraphView.swift */,
-				AE75842C1D6989150005C1B1 /* ViewController.swift */,
 				AE75842E1D6989150005C1B1 /* Main.storyboard */,
 				AE7584481D698A660005C1B1 /* Supporting Files */,
 			);
@@ -79,6 +78,7 @@
 		AE7584481D698A660005C1B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE75842C1D6989150005C1B1 /* ViewController.swift */,
 				AE75843C1D69894B0005C1B1 /* AppDelegate.swift */,
 				AE7584311D6989150005C1B1 /* Assets.xcassets */,
 				AE7584331D6989150005C1B1 /* LaunchScreen.storyboard */,

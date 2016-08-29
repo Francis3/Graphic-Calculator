@@ -9,11 +9,11 @@
 import UIKit
 import CoreGraphics
 
-extension CGRect {
-    public mutating func insetInPlace(dx: CGFloat = 0,dy: CGFloat = 0) {
-        self = insetBy(dx: dx, dy: dy)
-    }
-}
+//extension CGRect {
+//    public mutating func insetInPlace(dx: CGFloat = 0,dy: CGFloat = 0) {
+//        self = insetBy(dx: dx, dy: dy)
+//    }
+//}
 
 
 class AxesDrawer
@@ -117,8 +117,6 @@ class AxesDrawer
                 }
 
                 bbox.insetInPlace(dx: -pointsPerHashmark, dy: -pointsPerHashmark)
-                print("heigt: \(bbox.height) width: \(bbox.width)")
-                print("  ")
             }
         }
     }
@@ -199,5 +197,8 @@ extension CGRect
 {
     init(center: CGPoint, size: CGSize) {
         self.init(x: center.x-size.width/2, y: center.y-size.height/2, width: size.width, height: size.height)
+    }
+    public mutating func insetInPlace(dx: CGFloat = 0,dy: CGFloat = 0) {
+        self = insetBy(dx: dx, dy: dy)
     }
 }

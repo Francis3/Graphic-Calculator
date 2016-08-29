@@ -58,10 +58,8 @@ class CalculatorViewController: UIViewController {
     
     // MARK: - M button
     @IBAction func getVariableM(_ sender: UIButton) {
-       // if let variableUsed = sender.currentTitle {
-            brain.setOperand(VariableName: sender.currentTitle!) 
-            displayValue = brain.result
-        //}
+        brain.setOperand(VariableName: sender.currentTitle!)
+        displayValue = brain.result
     }
     
     private var displayValue: Double? {
@@ -92,6 +90,32 @@ class CalculatorViewController: UIViewController {
         displayDescription.text = brain.description + (brain.isPartialResult ? " ..." : " =")
         //just to test the error mesages reported by the brain
         print("Brain Error: \(brain.errorReported)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var destinationvc = segue.destination
+        if let navcon = destinationvc as? UINavigationController {
+            destinationvc = navcon.visibleViewController ?? destinationvc
+        }
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "Show Graph":
+                if let graphvc = destinationvc as? GraphViewController {
+                    graphvc.navigationItem.title = brain.description
+                    graphvc.graphProgram = brain.program
+                }
+            default: break
+            }
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        switch identifier {
+        case "Show Graph":
+            return !brain.isPartialResult
+        default:
+            return false
+        }
     }
 }
 
