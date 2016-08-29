@@ -221,16 +221,7 @@ class CalculatorBrain {
                     } else {
                         setOperand(VariableName: op as! String)
                     }
-                    
-                    //                    //if let operand = op as? Double {
-                    //                        setOperand(operand: operand)
-                    //                    } else if let operation = op as? String {
-                    //                        if variableValues[operation] != nil {
-                    //                            setOperand(VariableName: operation)
-                    //                        } else {
-                    //                            performOperation(symbol: operation)
-                    //                        }
-                    //                    }
+                  }
                 }
             }
         }
