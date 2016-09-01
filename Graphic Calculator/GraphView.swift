@@ -26,7 +26,7 @@ class GraphView: UIView
     private var color = UIColor.black
     
     //@IBInspectable
-    private var graphScaleFactor: CGFloat = 50 { didSet { setNeedsDisplay()}}
+    var graphScaleFactor: CGFloat = 50 { didSet { setNeedsDisplay()}}
     //@IBInspectable
     var axesCenter: CGPoint = CGPoint(x: 0,y :0) { didSet { setNeedsDisplay()}}
     

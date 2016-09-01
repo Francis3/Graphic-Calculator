@@ -10,6 +10,13 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
+    @IBOutlet weak var graphButton: UIButton! {
+        didSet {
+            graphButton.setTitle("💤", for: .disabled)
+            graphButton.setTitle("📈", for: .normal )
+        }
+    }
+    
     
     @IBOutlet weak var displayDescription: UILabel!
     
@@ -20,6 +27,8 @@ class CalculatorViewController: UIViewController {
             initFormatter()
         }
     }
+    
+    private var graphIsPossible: Bool { return !brain.isPartialResult}
     
     private let formatter = NumberFormatter()
     
@@ -88,6 +97,7 @@ class CalculatorViewController: UIViewController {
         }
         displayValue = brain.result
         displayDescription.text = brain.description + (brain.isPartialResult ? " ..." : " =")
+        graphButton.isEnabled = graphIsPossible
         //just to test the error mesages reported by the brain
         print("Brain Error: \(brain.errorReported)")
     }

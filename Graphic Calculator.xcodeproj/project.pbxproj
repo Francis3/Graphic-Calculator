@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE1081E01D76A82600A13EDF /* GraphData.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE1081DF1D76A82600A13EDF /* GraphData.plist */; };
 		AE75842D1D6989150005C1B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75842C1D6989150005C1B1 /* ViewController.swift */; };
 		AE7584301D6989150005C1B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE75842E1D6989150005C1B1 /* Main.storyboard */; };
 		AE7584321D6989150005C1B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7584311D6989150005C1B1 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE1081DF1D76A82600A13EDF /* GraphData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GraphData.plist; sourceTree = "<group>"; };
 		AE7584271D6989150005C1B1 /* Graphic Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graphic Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE75842C1D6989150005C1B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE75842F1D6989150005C1B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		AE75841E1D6989150005C1B1 = {
 			isa = PBXGroup;
 			children = (
+				AE1081DF1D76A82600A13EDF /* GraphData.plist */,
 				AE7584291D6989150005C1B1 /* Graphic Calculator */,
 				AE7584281D6989150005C1B1 /* Products */,
 			);
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE7584351D6989150005C1B1 /* LaunchScreen.storyboard in Resources */,
+				AE1081E01D76A82600A13EDF /* GraphData.plist in Resources */,
 				AE7584321D6989150005C1B1 /* Assets.xcassets in Resources */,
 				AE7584301D6989150005C1B1 /* Main.storyboard in Resources */,
 			);
