@@ -17,7 +17,6 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    
     @IBOutlet weak var displayDescription: UILabel!
     
     private var userIsInTheMiddleOfTyping = false

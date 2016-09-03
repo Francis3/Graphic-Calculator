@@ -29,7 +29,7 @@ class GraphView: UIView
     var graphScaleFactor: CGFloat = 50 { didSet { setNeedsDisplay()}}
     //@IBInspectable
     var axesCenter: CGPoint = CGPoint(x: 0,y :0) { didSet { setNeedsDisplay()}}
-    
+
     // MARK: - Main draw function
     
     internal override func draw(_ rect: CGRect) {
