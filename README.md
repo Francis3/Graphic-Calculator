@@ -1,5 +1,6 @@
 # Graphic-Calculator
 iOS Swift learning course - CS193P_SPR16 - Programming Project 3: Graphic Calculator
+Copyright (c) 2015-16 Stanford University. All rights reserved.
 
 Xcode Version 8.0 beta 6 (8S201h)
 
